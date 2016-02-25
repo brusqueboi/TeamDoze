@@ -14,7 +14,6 @@ public class CalendarEvent {
 
     // declarations of variables used for the .ics file
     boolean end = false;
-    String input = "";
     int choice = 0;
     File file = null;
     String ver = "VERSION:", pvt = "PRIVATE", pub = "PUBLIC", con = "CONFIDENTIAL";
@@ -40,7 +39,46 @@ public class CalendarEvent {
       input = sc.nextLine();
 
       try {
-           choice = Integer.parseInt(input);
+          choice = Integer.parseInt(input);
+          if(choice<4){
+
+            switch(choice){
+
+                case 1:
+
+                    // user input for the name of the event
+                    System.out.println("\nYou have chosen a single day event.");
+                    System.out.println("Event name: ");
+                    input = sc.nextLine();
+                    summary = summary.concat(input+"\n");
+
+                    // user input for the location of event
+                    System.out.println("\nLocation of Event: ");
+                    input = sc.nextLine();
+                    location = location.concat(input+"\n");
+
+                    // user input for the date of event
+                    System.out.println("\nEnter date (MM/DD/YYYY) of event: ");
+                    input = sc.nextLine();
+
+                    // formats the date
+                    SimpleDateFormat sdf = new SimpleDateFormat(uformat);
+                    try {
+
+                        Date d = new Date();
+                        d = sdf.parse(input);
+                        sdf.applyPattern(calFormat);
+                        newStartDateStr = sdf.format(d);
+
+                    }
+                    catch(ParseException pe){
+                        pe.printStackTrace();
+                    }
+
+
+
+            }
+          }
 
       }
       catch (java.lang.NumberFormatException se){
