@@ -108,7 +108,7 @@ public class CalendarEvent {
       catch (java.lang.NumberFormatException se){
 
         System.out.println("\nYou have entered an invalid selection.");
-        System.out.println("\nPlease try again.")
+        System.out.println("\nPlease try again.");
       }
     }
     System.exit(0);
