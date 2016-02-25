@@ -1,7 +1,15 @@
 //***********************************************************************************************
 //  Team: Doze
 //  ICS 314
+<<<<<<< HEAD
 //  Authors: Dorienne Matsuno, Marlene Mabut, Jacob Dalton
+=======
+<<<<<<< HEAD
+//  Authors: Dorienne Matsuno, Marlene Abut, Jacob Dalton
+=======
+//  Authors: Dorienne Matsuno, Marlene Abut, Jacob Dalton
+>>>>>>> origin/master
+>>>>>>> origin/master
 //
 //***********************************************************************************************
 import java.util.*;
