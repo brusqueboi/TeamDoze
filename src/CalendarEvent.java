@@ -65,15 +65,25 @@ public class CalendarEvent {
                     SimpleDateFormat sdf = new SimpleDateFormat(uformat);
                     try {
 
+                        // changes date to match the calendar formatting
                         Date d = new Date();
                         d = sdf.parse(input);
                         sdf.applyPattern(calFormat);
                         newStartDateStr = sdf.format(d);
 
+                        // removes all the things not used in the calendar format
+                        input = newStartDateStr.replaceAll("/", "");
+                        dtstart = dtstart.concat(input);
+                        dtend = dtstart;
+
                     }
                     catch(ParseException pe){
+
+                        // helps find problems in code, if any
                         pe.printStackTrace();
                     }
+
+
 
 
 
