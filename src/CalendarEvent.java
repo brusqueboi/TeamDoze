@@ -1,3 +1,9 @@
+//***********************************************************************************************
+//  Team: Doze
+//  ICS 314
+//  Authors: Matsuno, Mabut, Jacob Dalton
+//
+//***********************************************************************************************
 import java.util.*;
 import java.text.*;
 import java.io.*;
@@ -5,6 +11,9 @@ import java.io.*;
 public class CalendarEvent {
   public static void main (String [] arg){
 
+//***********************************************************************************************
+//  Declaration of variables
+//***********************************************************************************************
     // Scanner to read user input
     Scanner sc = new Scanner (System.in);
 
@@ -18,12 +27,17 @@ public class CalendarEvent {
     File file = null;
     String ver = "VERSION:", pvt = "PRIVATE", pub = "PUBLIC", con = "CONFIDENTIAL";
     double verNum = 2.0;
-    String timez = "", tx = "",dtstart = "", dtend = "", upper = "";
+    String timez = "", tx = "", dtstart = "", dtend = "", upper = "";
     String location = "", summary = "", input = "", cl = "", priority = "";
     String newStartDateStr  = "", newEndDateStr = "";
     String[] splitTime, splitDate;
     String sTime = "", eTime = "", sHTime = "", sMTime = "", eHTime = "", eMTime = "", sDate = "", eDate = "";
     int intETime, intSTime, intSHTime, intSMTime, intEHTime, intEMTime, intPriority;
+
+//***********************************************************************************************
+//  start of code
+//***********************************************************************************************
+
     ver = ver.concat(verNum + "\n");
 
     System.out.println("\nThis program is to create an event that gets exported");
