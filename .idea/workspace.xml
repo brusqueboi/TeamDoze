@@ -28,9 +28,10 @@
       <file leaf-file-name="CalendarEvent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10273973">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state vertical-scroll-proportion="3.869863">
+              <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
               <folding>
+                <element signature="e#0#4890#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -419,12 +420,12 @@
       <created>1456376544274</created>
       <option name="number" value="Default" />
       <updated>1456376544274</updated>
-      <workItem from="1456376546703" duration="6628000" />
+      <workItem from="1456376546703" duration="7294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6628000" />
+    <option name="totallyTimeSpent" value="7294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="23" width="1132" height="558" extended-state="0" />
@@ -470,9 +471,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10273973">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state vertical-scroll-proportion="3.869863">
+          <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
           <folding>
+            <element signature="e#0#4890#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

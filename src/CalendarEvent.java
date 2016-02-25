@@ -1,7 +1,7 @@
 //***********************************************************************************************
 //  Team: Doze
 //  ICS 314
-//  Authors: Matsuno, Mabut, Jacob Dalton
+//  Authors: Dorienne Matsuno, Marlene Mabut, Jacob Dalton
 //
 //***********************************************************************************************
 import java.util.*;
@@ -97,6 +97,23 @@ public class CalendarEvent {
                         pe.printStackTrace();
                     }
 
+                    // user input for the  start and end time of the event
+                    System.out.println("\nStart time (ex. 8am or 8:30am) of the event: ");
+                    sTime = sc.nextLine();
+                    System.out.println("\nEnd time (ex. 10am or 10:30am) of the event: ");
+                    eTime = sc.nextLine();
+
+                    // format time for calendar format
+                    if(sTime.contains("am")){
+
+                        sTime = sTime.replace("am", "");
+
+                        if(sTime.contains(":")){
+
+                            splitTime = sTime.split(":");
+                            
+                        }
+                    }
 
 
 
