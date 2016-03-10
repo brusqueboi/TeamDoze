@@ -22,6 +22,7 @@ public class CalendarEvent {
     String discription="";
     String timezone="";
     String date="";
+    String classification="";
     int answer=0,start=0,end=0;
     float geolat=0F,geolon=0F;
     String geolonf="";
@@ -65,6 +66,7 @@ public class CalendarEvent {
 		  System.out.println("5: Location");
 		  System.out.println("6: Time Zone");
 		  System.out.println("7: Geographical Position");
+		  System.out.println("8: Classification");
 		  System.out.println("0: Quit\n");
 	  }
 	  
@@ -96,6 +98,9 @@ public class CalendarEvent {
 			  case 7:
 				  GeoPosition();
 				  break;
+			  case 8:
+				  Class();
+				  break;
 			  case 0:
 				  print();
 				  System.exit(0);
@@ -122,6 +127,7 @@ public class CalendarEvent {
 		        output.write("LOCATION:"+location+"\n");
 		        output.write("GEO:"+geolat+";"+geolon+"\n");
 		        output.write("SUMMARY:"+event+"\n");
+		        output.write("CLASS:"+classification+"\n");
 		        output.write("END:VEVENT\n");
 		        output.write("END:VCALENDAR\n");
 
@@ -211,6 +217,11 @@ public class CalendarEvent {
 		  nf.setGroupingUsed(false);
 		  geolatf=nf.format(geolat).toString();
 		  geolonf=nf.format(geolon).toString();
+	  }
+	  
+	  public void Class(){
+		  System.out.println("Enter the classification type for the event:");
+		  classfication=input.next().toUppercase();
 	  }
 }	
 
