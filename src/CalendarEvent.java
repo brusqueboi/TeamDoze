@@ -45,6 +45,14 @@ public class CalendarEvent {
     System.exit(0);
   }
   
+  public void Directions(){
+	  System.out.print("******************************************\n");
+	  System.out.print("        iCalender Event Scheduler         \n");
+	  System.out.print("******************************************\n");
+	  System.out.print("Instructions: The following options will schedule an event.\n");
+	  System.out.print("              Please chose from the list to setup the event.\n");
+  }  
+  
   public void Menu(){
 	  System.out.print("1: Event\n");
 	  System.out.print("2: Time Start\n");
@@ -53,4 +61,5 @@ public class CalendarEvent {
 	  System.out.print("5: Discription\n");
 	  System.out.print("6: Time Zone\n");
   }
+  
 }
