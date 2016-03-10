@@ -5,8 +5,6 @@
 //
 //***********************************************************************************************
 
-
-
 import java.util.*;
 import java.text.*;
 import java.io.*;
@@ -23,8 +21,11 @@ public class CalendarEvent {
     String location="";
     String discription="";
     String timezone="";
-    String summary="";
+    String date="";
     int answer=0,start=0,end=0;
+    float geolat=0F,geolon=0F;
+    String geolonf="";
+	String geolatf="";
 //****************************************************************************************************
 //  start of code
 //****************************************************************************************************    
@@ -58,11 +59,12 @@ public class CalendarEvent {
 	
 	  public void Menu(){
 		  System.out.println("1: Event");
-		  System.out.println("2: Time Start");
-		  System.out.println("3: Time End");
-		  System.out.println("4: Location");
-		  System.out.println("5: Discription");
+		  System.out.println("2: Date");		  
+		  System.out.println("3: Time Start");
+		  System.out.println("4: Time End");
+		  System.out.println("5: Location");
 		  System.out.println("6: Time Zone");
+		  System.out.println("7: Geographical Position");
 		  System.out.println("0: Quit\n");
 	  }
 	  
@@ -77,20 +79,22 @@ public class CalendarEvent {
 				  Event();
 				  break;
 			  case 2:
-				  StartTime();		  
+				  Date();		  
 				  break;
 			  case 3:
-				  EndTime();			  
+				  StartTime();			  
 				  break;
 			  case 4:
-				  Location();
+				  EndTime();
 				  break;
 			  case 5:
-				  Discription();
+				  Location();
 				  break;
 			  case 6:
 				  TimeZone();
 				  break;
+			  case 7:
+				  GeoPosition();
 			  case 0:
 				  print();
 				  System.exit(0);
@@ -112,10 +116,11 @@ public class CalendarEvent {
 		        output.write("BEGIN:VCALENDAR\n");
 		        output.write("VERSION: 2.0\n");
 		        output.write("BEGIN:VEVENT\n");
-		        output.write("DTSTART;TZID="+location+":20160226T130000\n");
-		        output.write("DTEND;TZID="+location+"Pacific/Honolulu:20160226T140000\n");
+		        output.write("DTSTART;TZID="+timezone+":"+date+"T"+start+"\n");
+		        output.write("DTEND;TZID="+timezone+":"+date+"T"+end+"\n");
 		        output.write("LOCATION:"+location+"\n");
-		        output.write("SUMMARY:"+summary+"\n");
+		        output.write("GEO:"+geolat+";"+geolon+"\n");
+		        output.write("SUMMARY:"+event+"\n");
 		        output.write("END:VEVENT\n");
 		        output.write("END:VCALENDAR\n");
 
@@ -131,6 +136,11 @@ public class CalendarEvent {
 		  System.out.println("Enter the event:");
 		  event=input.next();
 	  }
+	  
+	  public void Date(){
+		  System.out.println("Enter date (YYYY/MM/DD) of event:");
+		  date=input.next();
+	  }	  
 	  
 	  public void StartTime(){
 		  System.out.println("Enter the start time:");
@@ -183,15 +193,25 @@ public class CalendarEvent {
 		  location=input.next();
 	  }
 	  
-	  public void Discription(){
-		  System.out.println("Enter a discription of event:");
-		  summary=input.next();
-	  }
 	  
 	  public void TimeZone(){
 		  System.out.println("Enter the time zone:");
 		  timezone=input.next();
 	  }
+	  
+	  public void GeoPosition(){
+		  System.out.println("Enter latitude for the geographical position:");
+		  geolat=input.nextFloat();
+		  System.out.println("Enter longitude for the geographical position:");	
+		  geolon=input.nextFloat();
+			
+		  NumberFormat nf = NumberFormat.getInstance();
+		  nf.setMaximumFractionDigits(6);            
+		  nf.setGroupingUsed(false);
+		  geolatf=nf.format(geolat).toString();
+		  geolonf=nf.format(geolon).toString();
+	  }
 }	
+
 
 
