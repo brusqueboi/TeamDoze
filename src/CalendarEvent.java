@@ -15,6 +15,9 @@ public class CalendarEvent {
 //  Declaration of variables
 //***********************************************************************************************
     File file;
+    Scanner input=new Scanner(System.in);
+    String answer="",event="",location="",discription="",timezone="";
+    int start=0,end=0;
 //***********************************************************************************************
 //  start of code
 //***********************************************************************************************
@@ -42,6 +45,8 @@ public class CalendarEvent {
       System.out.print("Error");
     }
 
+    Directions();
+    Menu();
     System.exit(0);
   }
   
@@ -60,10 +65,12 @@ public class CalendarEvent {
 	  System.out.print("4: Location\n");
 	  System.out.print("5: Discription\n");
 	  System.out.print("6: Time Zone\n");
+	  System.out.print("E: Exit\n");
   }
   
   public void userInput(){
-	  Switch(){
+	  answer=input.nextInt();
+	  Switch(answer){
 		  case 1: 
 			  Event();
 			  break;
@@ -90,25 +97,67 @@ public class CalendarEvent {
   
   public void Event(){
 	  System.out.println("Enter the event:");
+	  event=input.nextLine();
   }
   
   public void StartTime(){
 	  System.out.println("Enter the start time:");
+	  start=input.nextInt();
+	  
+	  try
+	  {
+	    if(integerValue == 0)
+	    {
+	      throw new Exception("\n\tInput must at least be 1.");
+	    }
+	    if (integerValue < 0)
+	    {
+	      throw new Exception("\n\tInput cannot be a negative.");
+	    }
+	  }
+	  catch(Exception e)
+	  {
+		  System.out.println(e.getMessage());
+		  StartTime();
+	  }
+	  
   }
   
   public void EndTime(){
-	  System.out.println("Enter the end time:");'
+	  System.out.println("Enter the end time:");
+	  end=input.nextInt();	  
+	  
+	  try
+	  {
+	    if(integerValue == 0)
+	    {
+	      throw new Exception("\n\tInput must at least be 1.");
+	    }
+	    if (integerValue < 0)
+	    {
+	      throw new Exception("\n\tInput cannot be a negative.");
+	    }
+	  }
+	  catch(Exception e)
+	  {
+		  System.out.println(e.getMessage());
+		  EndTime();
+	  }	  
+	  
   }
   
   public void Location(){
 	  System.out.println("Enter the location:");
+	  location=input.nextLine();
   }
   
   public void Discription(){
 	  System.out.println("Enter a discription of event:");
+	  summary=input.nextLine();
   }
   
   public void TimeZone(){
 	  System.out.println("Enter the time zone:");
+	  timezone=input.nextLine();
   }
 }
