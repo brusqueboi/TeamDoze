@@ -95,6 +95,7 @@ public class CalendarEvent {
 				  break;
 			  case 7:
 				  GeoPosition();
+				  break;
 			  case 0:
 				  print();
 				  System.exit(0);
@@ -212,6 +213,7 @@ public class CalendarEvent {
 		  geolonf=nf.format(geolon).toString();
 	  }
 }	
+
 
 
 
