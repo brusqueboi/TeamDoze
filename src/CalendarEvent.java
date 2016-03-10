@@ -62,4 +62,53 @@ public class CalendarEvent {
 	  System.out.print("6: Time Zone\n");
   }
   
+  public void userInput(){
+	  Switch(){
+		  case 1: 
+			  Event();
+			  break;
+		  case 2:
+			  StartTime();
+			  break;
+		  case 3:
+			  EndTime();
+			  break;
+		  case 4:
+			  Location();
+			  break;
+		  case 5:
+			  Discription();
+			  break;
+		  case 6:
+			  TimeZone();
+			  break;
+		  default:
+			  System.out.println("Error: Please choose from the list.");
+			  break;
+	  }	  
+  }
+  
+  public void Event(){
+	  System.out.println("Enter the event:");
+  }
+  
+  public void StartTime(){
+	  System.out.println("Enter the start time:");
+  }
+  
+  public void EndTime(){
+	  System.out.println("Enter the end time:");'
+  }
+  
+  public void Location(){
+	  System.out.println("Enter the location:");
+  }
+  
+  public void Discription(){
+	  System.out.println("Enter a discription of event:");
+  }
+  
+  public void TimeZone(){
+	  System.out.println("Enter the time zone:");
+  }
 }
