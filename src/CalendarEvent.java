@@ -44,4 +44,13 @@ public class CalendarEvent {
 
     System.exit(0);
   }
+  
+  public void Menu(){
+	  System.out.print("1: Event\n");
+	  System.out.print("2: Time Start\n");
+	  System.out.print("3: Time End\n");
+	  System.out.print("4: Location\n");
+	  System.out.print("5: Discription\n");
+	  System.out.print("6: Time Zone\n");
+  }
 }
