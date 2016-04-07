@@ -7,9 +7,9 @@
 import java.util.*;
 import java.text.*;
 import java.io.*;
+import java.lang.Math;
 
 public class CalendarEvent {
-  public static void main (String [] arg){
 
 //***********************************************************************************************
 //  Declaration of variables
@@ -17,6 +17,7 @@ public class CalendarEvent {
     File file;
     Scanner sc = new Scanner (System.in);
     int choice;
+    int inputchoice = 0;     
     String input = "";
     String geolatf = "";
     String geolonf = "";
@@ -40,11 +41,13 @@ public class CalendarEvent {
     String co = "CONFIDENTIAL";
     String pr = "PRIVATE";
     String p = "PUBLIC";
+    double distance = 0.0;     
     float longi = 0;
     float lat = 0;
     int nshtime = 0;
     int nehtime = 0;
 
+    private static double RADIUS = 3950.02; //miles
     final String uFormat = "MM/dd/yyyy";
     final String cFormat = "yyyy/MM/dd";
 
@@ -52,17 +55,36 @@ public class CalendarEvent {
 //  start of code
 //***********************************************************************************************
 
+  public static void main (String [] arg){
+	  new CalendarEvent();  
+  }
+	
+  public CalendarEvent(){
+	  scheduler(); 
+  }    
+
+  public double greatCircleDistance(double lat1, double long1, double lat2, double long2){
+	 double geolat1 = Math.toRadians(lat1);
+	 double geolong1 = Math.toRadians(long1);
+	 double geolat2 = Math.toRadians(lat2);
+	 double geolong2 = Math.toRadians(long2);
+	 distance = RADIUS*Math.acos(Math.sin(geolat1)*Math.sin(geolat2) + Math.cos(geolat1)*Math.cos(geolat2)*Math.cos(geolong1-geolong2));
+	 return (distance);
+  }
+
+  public void scheduler(){
+    
     while(end == false){
 
-    System.out.println("******************************************\n");
-    System.out.print("        iCalender Event Scheduler         \n");
-    System.out.print("******************************************\n");
-    System.out.print("Instructions: The following options will schedule an event.\n");
-    System.out.print("              Please choose from the list to setup the event.\n");
+    System.out.println("******************************************");
+    System.out.println("        iCalender Event Scheduler         ");
+    System.out.println("******************************************");
+    System.out.println("Instructions: The following options will schedule an event.");
+    System.out.println("              Please choose from the list to setup the event.");
 
     System.out.println("1: Quit");
-    System.out.print("2: Create Event\n");
-    System.out.print("3. Modify Event");
+    System.out.println("2: Create Event");
+    System.out.println("3. Modify Event");
 
 
     input = sc.nextLine();
@@ -98,24 +120,12 @@ public class CalendarEvent {
             input = sc.nextLine();
             location = location.concat(input + "\n");
 
-            System.out.println("Enter latitude for the geographical position:");
-            lat = sc.nextFloat();
-            System.out.println("Enter longitude for the geographical position:");
-            longi = sc.nextFloat();
-
-            NumberFormat nf = NumberFormat.getInstance();
-            nf.setMaximumFractionDigits(6);
-            nf.setGroupingUsed(false);
-            geolatf = nf.format(lat).toString();
-            geolonf = nf.format(longi).toString();
-
-            sc.nextLine();
 
             // input and format of the date field
 
             while(dend == false){
 
-              System.out.println("\nPlease the date in this format: MM/DD/YYYY");
+              System.out.println("\nEnter the date in this format: MM/DD/YYYY");
               System.out.println("Date of Event: ");
 
               input = sc.nextLine();
@@ -230,9 +240,25 @@ public class CalendarEvent {
 
             break;
           case 3:
-            System.out.println("Modify an Event");
-            System.out.println("STILL IN DEVELOPMENT");
+            System.out.println("Select the following option to modify the event\n");
+            System.out.println("1. Geographical position");
+            
+            inputchoice = sc.nextInt();
+            if(inputchoice == 1){  
+            System.out.println("Enter latitude for the geographical position:");
+            lat = sc.nextFloat();
+            System.out.println("Enter longitude for the geographical position:");
+            longi = sc.nextFloat();
+
+            NumberFormat nf = NumberFormat.getInstance();
+            nf.setMaximumFractionDigits(6);
+            nf.setGroupingUsed(false);
+            geolatf = nf.format(lat).toString();
+            geolonf = nf.format(longi).toString();
+
+            sc.nextLine();
             break;
+            }
           default:
             System.out.println("Error: Please choose from the list.");
             break;
@@ -259,6 +285,7 @@ public class CalendarEvent {
       output.write("GEO:" + geolatf + ";" + geolonf + "\n");
       output.write("SUMMARY:" + summary);
       output.write("CLASS:" + classi);
+      output.write("COMMENT:" + "Event:" + distance + "\n");      
       output.write("END:VEVENT\n");
       output.write("END:VCALENDAR\n");
 
