@@ -46,8 +46,15 @@ public class CalendarEvent {
     float lat = 0;
     int nshtime = 0;
     int nehtime = 0;
+    char[] readLat1 = new char[9]; 
+    char[] readLongi1 = new char[10];
+    char[] readLat2 = new char[9]; 
+    char[] readLongi2 = new char[10];	
+    char[] traceoutput = new char[200];	
+    double greatdistance = 0.0;
+    
 
-    private static double RADIUS = 3950.02; //miles
+    private static final double RADIUS = 3950.02; //miles
     final String uFormat = "MM/dd/yyyy";
     final String cFormat = "yyyy/MM/dd";
 
@@ -256,6 +263,32 @@ public class CalendarEvent {
             geolatf = nf.format(lat).toString();
             geolonf = nf.format(longi).toString();
 
+	try{
+            	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
+            	
+            	readoutput.read(traceoutput,0,199); //stores events
+            	for (int i = 0; i < readLat1.length; i++){
+            		readLat1[i] = traceoutput[i+24]; //stores 1st row latitude coordinates
+            		readLat2[i] = traceoutput[i+67]; //stores 2nd row latitude coordinates
+            	}
+            	
+            	for (int i = 0; i < readLongi1.length; i++){
+            		readLongi1[i] = traceoutput[i+33]; //stores 1st row longitude coordinates
+            		readLongi2[i] = traceoutput[i+77]; //stores 2st row longitude coordinates            		
+            	}            	                 	
+            	        
+            	String storeLat1 = new String(readLat1);
+            	String storeLongi1 = new String(readLongi1);
+            	String storeLat2 = new String(readLat2);
+            	String storeLongi2 = new String(readLongi2);
+            	
+            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
+            	
+            	readoutput.close();
+        }
+        catch(IOException e){
+            System.out.println("Error: File not found.");
+        }
             sc.nextLine();
             break;
             }
