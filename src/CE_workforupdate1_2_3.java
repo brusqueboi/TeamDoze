@@ -7,11 +7,6 @@
 import java.util.*;
 import java.text.*;
 import java.io.*;
-<<<<<<< Updated upstream
-import java.lang.Math;
-
-public class CalendarEvent {
-=======
 import java.lang.*;
 
 public class CalendarEvent {
@@ -29,7 +24,6 @@ public class CalendarEvent {
   }
 
   public static void main (String [] arg){
->>>>>>> Stashed changes
 
 //***********************************************************************************************
 //  Declaration of variables
@@ -38,7 +32,6 @@ public class CalendarEvent {
     File file;
     Scanner sc = new Scanner (System.in);
     int choice;
-    int inputchoice = 0;     
     String input = "";
     String geolatf = "";
     String geolonf = "";
@@ -62,33 +55,17 @@ public class CalendarEvent {
     String co = "CONFIDENTIAL";
     String pr = "PRIVATE";
     String p = "PUBLIC";
-<<<<<<< Updated upstream
-    double distance = 0.0;     
-=======
     String filen = "";
     int[] startTime = new int[20];
     int[] endTime = new int[20];
     String[] location = new String[20];
->>>>>>> Stashed changes
     float longi = 0;
     float lat = 0;
     int nshtime = 0;
     int nehtime = 0;
-<<<<<<< Updated upstream
-    char[] readLat1 = new char[9]; 
-    char[] readLongi1 = new char[10];
-    char[] readLat2 = new char[9]; 
-    char[] readLongi2 = new char[10];	
-    char[] traceoutput = new char[200];	
-    double greatdistance = 0.0;
-    
-
-    private static final double RADIUS = 3950.02; //miles
-=======
     int numfile = 0;
     int length =  0;
 
->>>>>>> Stashed changes
     final String uFormat = "MM/dd/yyyy";
     final String cFormat = "yyyy/MM/dd";
 
@@ -96,36 +73,17 @@ public class CalendarEvent {
 //  start of code
 //***********************************************************************************************
 
-  public static void main (String [] arg){
-	  new CalendarEvent();  
-  }
-	
-  public CalendarEvent(){
-	  scheduler(); 
-  }    
-
-  public double greatCircleDistance(double lat1, double long1, double lat2, double long2){
-	 double geolat1 = Math.toRadians(lat1);
-	 double geolong1 = Math.toRadians(long1);
-	 double geolat2 = Math.toRadians(lat2);
-	 double geolong2 = Math.toRadians(long2);
-	 distance = RADIUS*Math.acos(Math.sin(geolat1)*Math.sin(geolat2) + Math.cos(geolat1)*Math.cos(geolat2)*Math.cos(geolong1-geolong2));
-	 return (distance);
-  }
-
-  public void scheduler(){
-    
     while(end == false){
 
-    System.out.println("******************************************");
-    System.out.println("        iCalender Event Scheduler         ");
-    System.out.println("******************************************");
-    System.out.println("Instructions: The following options will schedule an event.");
-    System.out.println("              Please choose from the list to setup the event.");
+    System.out.println("******************************************\n");
+    System.out.print("        iCalender Event Scheduler         \n");
+    System.out.print("******************************************\n");
+    System.out.print("Instructions: The following options will schedule an event.\n");
+    System.out.print("              Please choose from the list to setup the event.\n");
 
     System.out.println("1: Quit");
-    System.out.println("2: Create Event");
-    System.out.println("3. Modify Event");
+    System.out.print("2: Create Event\n");
+    System.out.print("3. Modify Event");
 
 
     input = sc.nextLine();
@@ -161,12 +119,24 @@ public class CalendarEvent {
             input = sc.nextLine();
             location = location.concat(input + "\n");
 
+            System.out.println("Enter latitude for the geographical position:");
+            lat = sc.nextFloat();
+            System.out.println("Enter longitude for the geographical position:");
+            longi = sc.nextFloat();
+
+            NumberFormat nf = NumberFormat.getInstance();
+            nf.setMaximumFractionDigits(6);
+            nf.setGroupingUsed(false);
+            geolatf = nf.format(lat).toString();
+            geolonf = nf.format(longi).toString();
+
+            sc.nextLine();
 
             // input and format of the date field
 
             while(dend == false){
 
-              System.out.println("\nEnter the date in this format: MM/DD/YYYY");
+              System.out.println("\nPlease the date in this format: MM/DD/YYYY");
               System.out.println("Date of Event: ");
 
               input = sc.nextLine();
@@ -282,53 +252,6 @@ public class CalendarEvent {
             break;
 
           case 3:
-<<<<<<< Updated upstream
-            System.out.println("Select the following option to modify the event\n");
-            System.out.println("1. Geographical position");
-            
-            inputchoice = sc.nextInt();
-            if(inputchoice == 1){  
-            System.out.println("Enter latitude for the geographical position:");
-            lat = sc.nextFloat();
-            System.out.println("Enter longitude for the geographical position:");
-            longi = sc.nextFloat();
-
-            NumberFormat nf = NumberFormat.getInstance();
-            nf.setMaximumFractionDigits(6);
-            nf.setGroupingUsed(false);
-            geolatf = nf.format(lat).toString();
-            geolonf = nf.format(longi).toString();
-
-	try{
-            	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
-            	
-            	readoutput.read(traceoutput,0,199); //stores events
-            	for (int i = 0; i < readLat1.length; i++){
-            		readLat1[i] = traceoutput[i+24]; //stores 1st row latitude coordinates
-            		readLat2[i] = traceoutput[i+67]; //stores 2nd row latitude coordinates
-            	}
-            	
-            	for (int i = 0; i < readLongi1.length; i++){
-            		readLongi1[i] = traceoutput[i+33]; //stores 1st row longitude coordinates
-            		readLongi2[i] = traceoutput[i+77]; //stores 2st row longitude coordinates            		
-            	}            	                 	
-            	        
-            	String storeLat1 = new String(readLat1);
-            	String storeLongi1 = new String(readLongi1);
-            	String storeLat2 = new String(readLat2);
-            	String storeLongi2 = new String(readLongi2);
-            	
-            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
-            	System.out.println("Distance:");
-            	readoutput.close();
-        }
-        catch(IOException e){
-            System.out.println("Error: File not found.");
-        }
-            sc.nextLine();
-            break;
-            }
-=======
 
             System.out.println("Add multiple events for a single day.");
 
@@ -408,7 +331,6 @@ public class CalendarEvent {
 
             break;
 
->>>>>>> Stashed changes
           default:
             System.out.println("Error: Please choose from the list.");
             break;
@@ -435,7 +357,6 @@ public class CalendarEvent {
       output.write("GEO:" + geolatf + ";" + geolonf + "\n");
       output.write("SUMMARY:" + summary);
       output.write("CLASS:" + classi);
-      output.write("COMMENT:" + "Event:" + distance + "\n");      
       output.write("END:VEVENT\n");
       output.write("END:VCALENDAR\n");
 
