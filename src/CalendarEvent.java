@@ -17,10 +17,11 @@ public class CalendarEvent {
     private String dtstart = "";
     private node next;
     private node previous;
-    private String dtend = "";
-    private String location = "";
-    private String summary = "";
-    private String cla = "";
+    private String ndtstart = "";
+    private String ndtend = "";
+    private String nlocation = "";
+    private String nsummary = "";
+    private String nclass = "";
 
   }
 
