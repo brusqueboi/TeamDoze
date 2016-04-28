@@ -38,7 +38,6 @@ public class CalendarEvent {
     String geo = "";
     String input2 = "";
     String summary = "";
-    String location = "";
     String newDateStr = "";
     String dtstart = "";
     String dtend = "";

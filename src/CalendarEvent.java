@@ -7,11 +7,7 @@
 import java.util.*;
 import java.text.*;
 import java.io.*;
-<<<<<<< Updated upstream
 import java.lang.Math;
-
-public class CalendarEvent {
-=======
 import java.lang.*;
 
 public class CalendarEvent {
@@ -28,17 +24,41 @@ public class CalendarEvent {
 
   }
 
-  public static void main (String [] arg){
->>>>>>> Stashed changes
+  public static void main (String [] arg) {
+
 
 //***********************************************************************************************
-//  Declaration of variables
+//  start of code
 //***********************************************************************************************
+    new CalendarEvent();
+  }
+	
+  public CalendarEvent(){
+	  scheduler(); 
+  }
+
+  public double greatCircleDistance(double lat1, double long1, double lat2, double long2){
+
+    final double RADIUS = 3950.02; //miles
+    double distance;
+	  double geolat1 = Math.toRadians(lat1);
+	  double geolong1 = Math.toRadians(long1);
+	  double geolat2 = Math.toRadians(lat2);
+	  double geolong2 = Math.toRadians(long2);
+	  distance = RADIUS*Math.acos(Math.sin(geolat1)*Math.sin(geolat2) + Math.cos(geolat1)*Math.cos(geolat2)*Math.cos(geolong1-geolong2));
+	 return (distance);
+  }
+
+  public void scheduler(){
+
+    //***********************************************************************************************
+    //  Declaration of variables
+    //***********************************************************************************************
 
     File file;
-    Scanner sc = new Scanner (System.in);
+    Scanner sc = new Scanner(System.in);
     int choice;
-    int inputchoice = 0;     
+    int inputchoice = 0;
     String input = "";
     String geolatf = "";
     String geolonf = "";
@@ -62,58 +82,28 @@ public class CalendarEvent {
     String co = "CONFIDENTIAL";
     String pr = "PRIVATE";
     String p = "PUBLIC";
-<<<<<<< Updated upstream
-    double distance = 0.0;     
-=======
+
+    double distance = 0.0;
+
     String filen = "";
     int[] startTime = new int[20];
     int[] endTime = new int[20];
-    String[] location = new String[20];
->>>>>>> Stashed changes
+    String[] locations = new String[20];
     float longi = 0;
     float lat = 0;
     int nshtime = 0;
     int nehtime = 0;
-<<<<<<< Updated upstream
-    char[] readLat1 = new char[9]; 
+    char[] readLat1 = new char[9];
     char[] readLongi1 = new char[10];
-    char[] readLat2 = new char[9]; 
-    char[] readLongi2 = new char[10];	
-    char[] traceoutput = new char[200];	
+    char[] readLat2 = new char[9];
+    char[] readLongi2 = new char[10];
+    char[] traceoutput = new char[200];
     double greatdistance = 0.0;
-    
 
-    private static final double RADIUS = 3950.02; //miles
-=======
     int numfile = 0;
-    int length =  0;
-
->>>>>>> Stashed changes
+    int l = 0;
     final String uFormat = "MM/dd/yyyy";
     final String cFormat = "yyyy/MM/dd";
-
-//***********************************************************************************************
-//  start of code
-//***********************************************************************************************
-
-  public static void main (String [] arg){
-	  new CalendarEvent();  
-  }
-	
-  public CalendarEvent(){
-	  scheduler(); 
-  }    
-
-  public double greatCircleDistance(double lat1, double long1, double lat2, double long2){
-	 double geolat1 = Math.toRadians(lat1);
-	 double geolong1 = Math.toRadians(long1);
-	 double geolat2 = Math.toRadians(lat2);
-	 double geolong2 = Math.toRadians(long2);
-	 distance = RADIUS*Math.acos(Math.sin(geolat1)*Math.sin(geolat2) + Math.cos(geolat1)*Math.cos(geolat2)*Math.cos(geolong1-geolong2));
-	 return (distance);
-  }
-
-  public void scheduler(){
     
     while(end == false){
 
@@ -282,7 +272,7 @@ public class CalendarEvent {
             break;
 
           case 3:
-<<<<<<< Updated upstream
+
             System.out.println("Select the following option to modify the event\n");
             System.out.println("1. Geographical position");
             
@@ -301,6 +291,7 @@ public class CalendarEvent {
 
 	try{
             	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
+
             	
             	readoutput.read(traceoutput,0,199); //stores events
             	for (int i = 0; i < readLat1.length; i++){
@@ -328,14 +319,12 @@ public class CalendarEvent {
             sc.nextLine();
             break;
             }
-=======
+
 
             System.out.println("Add multiple events for a single day.");
 
             System.out.println("\nHow many event files would you like to add?");
             input = sc.nextLine();
-
-
 
             try{
               numfile = Integer.parseInt(input);
@@ -349,9 +338,9 @@ public class CalendarEvent {
 
                   try {
 
-                    BufferedReader filein = new BufferedReader(filen);
+                    BufferedReader filein = new BufferedReader(new FileReader (filen));
 
-                    while(sc.hasnextLine()){
+                    while((input = filein.readLine()) != null){
 
                       input = sc.nextLine();
 
@@ -359,8 +348,8 @@ public class CalendarEvent {
 
                         try {
 
-                          length = input.length() - 6;
-                          startTime[i] = Integer.parseInt(input.substring(length, input.length()));
+                          l = input.length() - 6;
+                          startTime[i] = Integer.parseInt(input.substring(l, input.length()));
                           Arrays.sort(startTime);
 
 
@@ -373,8 +362,8 @@ public class CalendarEvent {
                       if(input.contains("DTEND;TZID=")){
 
                         try{
-                          length = input.length() - 6;
-                          endTime[i] = input.substring(length, input.length());
+                          l = input.length() - 6;
+                          endTime[i] = Integer.parseInt(input.substring(l, input.length()));
                         }
                         catch(NumberFormatException e){
                           System.out.println("\nError: Unable to read files end time.");
@@ -408,7 +397,6 @@ public class CalendarEvent {
 
             break;
 
->>>>>>> Stashed changes
           default:
             System.out.println("Error: Please choose from the list.");
             break;
