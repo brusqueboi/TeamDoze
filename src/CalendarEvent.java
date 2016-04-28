@@ -274,9 +274,11 @@ public class CalendarEvent {
 
           case 3:
 
-            System.out.println("Select the following option to modify the event\n");
-            System.out.println("1. Geographical position");
-            
+            System.out.println("\nYou have chosen to read in multiple files.");
+
+
+
+            //code for big circle calculations
             inputchoice = sc.nextInt();
             if(inputchoice == 1){  
             System.out.println("Enter latitude for the geographical position:");
@@ -290,9 +292,8 @@ public class CalendarEvent {
             geolatf = nf.format(lat).toString();
             geolonf = nf.format(longi).toString();
 
-	try{
+	          try{
             	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
-
             	
             	readoutput.read(traceoutput,0,199); //stores events
             	for (int i = 0; i < readLat1.length; i++){
@@ -313,10 +314,10 @@ public class CalendarEvent {
             	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
             	System.out.println("Distance:");
             	readoutput.close();
-        }
-        catch(IOException e){
-            System.out.println("Error: File not found.");
-        }
+            }
+            catch(IOException e){
+              System.out.println("Error: File not found.");
+            }
             sc.nextLine();
             break;
             }
