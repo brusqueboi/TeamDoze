@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4dfbfc3-c831-4451-b656-d88a3122c37c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TeamDoze/CalendarEvent$node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TeamDoze/CalendarEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TeamDoze/LinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TeamDoze/Node.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarEvent.java" afterPath="$PROJECT_DIR$/src/CalendarEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="c4dfbfc3-c831-4451-b656-d88a3122c37c" name="Default" comment="" />
     <ignored path="CalendarEvent.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,8 +37,6 @@
               <folding>
                 <element signature="e#0#14446#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,8 +45,8 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3282443">
-              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.10687023">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding>
                 <element signature="e#916#917#0" expanded="true" />
                 <element signature="e#939#940#0" expanded="true" />
@@ -519,12 +509,12 @@
       <workItem from="1461816431656" duration="5872000" />
       <workItem from="1461824765595" duration="680000" />
       <workItem from="1461903305338" duration="4735000" />
-      <workItem from="1461914997090" duration="10000" />
+      <workItem from="1461914997090" duration="50000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49566000" />
+    <option name="totallyTimeSpent" value="49606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,8 +584,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -632,8 +620,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,8 +656,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -708,8 +692,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -721,8 +703,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -734,8 +714,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -747,8 +725,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -760,8 +736,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,8 +747,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -786,8 +758,6 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,16 +784,14 @@
           <folding>
             <element signature="e#0#14446#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3282443">
-          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.10687023">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding>
             <element signature="e#916#917#0" expanded="true" />
             <element signature="e#939#940#0" expanded="true" />
