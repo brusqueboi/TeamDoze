@@ -1,7 +1,7 @@
 //***********************************************************************************************
 //  Team: Doze
 //  ICS 314
-//  Authors: Dorienne Matsuno, Marlene Mabut, Jacob Dalton
+//  Authors: Dorienne Matsuno, Marlene Abut, Jacob Dalton
 //
 //***********************************************************************************************
 import java.util.*;
@@ -312,7 +312,8 @@ public class CalendarEvent {
             	String storeLongi2 = new String(readLongi2);
             	
             	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
-            	System.out.println("Distance:");
+            	System.out.println("Distance in miles:" + greatCircleDistance);
+            	System.out.println("Distance in kilometers:" +  greatCircleDistance/0.62137);
             	readoutput.close();
             }
             catch(IOException e){
