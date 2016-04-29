@@ -83,6 +83,8 @@ public class CalendarEvent {
     String p = "PUBLIC";
 
     double distance = 0.0;
+    double distanceMiles = 0.0;
+    double distanceKm = 0.0;
 
     String filen = "";
     int[] startTime = new int[20];
@@ -308,9 +310,10 @@ public class CalendarEvent {
             	String storeLongi2 = new String(readLongi2);
 
             	
-            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
-            	System.out.println("Distance in miles:" + greatCircleDistance);
-              System.out.println("Distance in kilometers:" +  greatCircleDistance/0.62137);
+            	distanceMiles = greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
+            	distanceKm = distanceMiles/0.62137;
+            	System.out.println("Distance in miles:" + distanceMiles);
+              System.out.println("Distance in kilometers:" +  distanceKm);
 
             	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));
             	System.out.println("Distance:");
@@ -425,7 +428,7 @@ public class CalendarEvent {
       output.write("GEO:" + geolatf + ";" + geolonf + "\n");
       output.write("SUMMARY:" + summary);
       output.write("CLASS:" + classi);
-      output.write("COMMENT:" + "Event:" + distance + "\n");      
+      output.write("COMMENT:" + "Event:" + distanceMiles +"miles"+ distanceKm +"kilometers \n");      
       output.write("END:VEVENT\n");
       output.write("END:VCALENDAR\n");
 
