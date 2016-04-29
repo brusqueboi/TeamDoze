@@ -153,11 +153,13 @@ public class CalendarEvent {
             location = location.concat(input + "\n");
 
 	    //code for geoposition
-	    System.out.println("Enter a '1' for geoposition");
+	    System.out.println("\nEnter a '1' for geoposition or '0' to skip");
             inputchoice = sc.nextInt();
             
+            do{
+            	
             if(inputchoice == 1){  
-            	System.out.println("Enter latitude for the geographical position:");
+            	System.out.println("\nEnter latitude for the geographical position:");
             	lat = sc.nextFloat();
             	System.out.println("Enter longitude for the geographical position:");
             	longi = sc.nextFloat();
@@ -167,11 +169,18 @@ public class CalendarEvent {
             	nf.setGroupingUsed(false);
             	geolatf = nf.format(lat).toString();
             	geolonf = nf.format(longi).toString();
+            	endl=false;
 	    }
+	    if(inputchoice == 0){
+	    	endl=false;
+	    }
+            }while(endl=false);
+            
+            sc.nextLine();//clear buffer
 
             // input and format of the date field
 
-            while(dend == false){
+            do{
 
               System.out.println("\nEnter the date in this format: MM/DD/YYYY");
               System.out.println("Date of Event: ");
@@ -194,7 +203,7 @@ public class CalendarEvent {
                 System.out.print("Error, Date is wrong");
                 dend = false;
               }
-            }
+            }while(dend == false);
 
             // input for time and formatting
 
