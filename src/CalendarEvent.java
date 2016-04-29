@@ -313,10 +313,8 @@ public class CalendarEvent {
             	distanceMiles = greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
             	distanceKm = distanceMiles/0.62137;
             	System.out.println("Distance in miles:" + distanceMiles);
-              System.out.println("Distance in kilometers:" +  distanceKm);
+              	System.out.println("Distance in kilometers:" +  distanceKm);
 
-            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));
-            	System.out.println("Distance:");
             	readoutput.close();
             }
             catch(IOException e){
