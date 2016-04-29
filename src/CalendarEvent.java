@@ -36,7 +36,7 @@ public class CalendarEvent {
 	  scheduler(); 
   }
 
-  public double greatCircleDistance(double lat1, double long1, double lat2, double long2){
+  public static double greatCircleDistance(double lat1, double long1, double lat2, double long2){
 
     final double RADIUS = 3950.02; //miles
     double distance;
@@ -83,6 +83,8 @@ public class CalendarEvent {
     String p = "PUBLIC";
 
     double distance = 0.0;
+    double distanceMiles = 0.0;
+    double distanceKm = 0.0;
 
     String filen = "";
     int[] startTime = new int[20];
@@ -150,10 +152,35 @@ public class CalendarEvent {
             input = sc.nextLine();
             location = location.concat(input + "\n");
 
+	    //code for geoposition
+	    System.out.println("\nEnter a '1' for geoposition or '0' to skip");
+            inputchoice = sc.nextInt();
+            
+            do{
+            	
+            if(inputchoice == 1){  
+            	System.out.println("\nEnter latitude for the geographical position:");
+            	lat = sc.nextFloat();
+            	System.out.println("Enter longitude for the geographical position:");
+            	longi = sc.nextFloat();
+
+            	NumberFormat nf = NumberFormat.getInstance();
+            	nf.setMaximumFractionDigits(6);
+            	nf.setGroupingUsed(false);
+            	geolatf = nf.format(lat).toString();
+            	geolonf = nf.format(longi).toString();
+            	endl=false;
+	    }
+	    if(inputchoice == 0){
+	    	endl=false;
+	    }
+            }while(endl=false);
+            
+            sc.nextLine();//clear buffer
 
             // input and format of the date field
 
-            while(dend == false){
+            do{
 
               System.out.println("\nEnter the date in this format: MM/DD/YYYY");
               System.out.println("Date of Event: ");
@@ -176,7 +203,7 @@ public class CalendarEvent {
                 System.out.print("Error, Date is wrong");
                 dend = false;
               }
-            }
+            }while(dend == false);
 
             // input for time and formatting
 
@@ -273,7 +300,7 @@ public class CalendarEvent {
           case 3:
 
             System.out.println("\nYou have chosen to read in multiple files.");
-
+	    System.out.println("Enter a '1' for geoposition");
             //code for big circle calculations
             inputchoice = sc.nextInt();
             if(inputchoice == 1){  
@@ -308,12 +335,11 @@ public class CalendarEvent {
             	String storeLongi2 = new String(readLongi2);
 
             	
-            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
-            	System.out.println("Distance in miles:" + greatCircleDistance);
-              System.out.println("Distance in kilometers:" +  greatCircleDistance/0.62137);
+            	distanceMiles = greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
+            	distanceKm = distanceMiles/0.62137;
+            	System.out.println("Distance in miles:" + distanceMiles);
+              	System.out.println("Distance in kilometers:" +  distanceKm);
 
-            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));
-            	System.out.println("Distance:");
             	readoutput.close();
             }
             catch(IOException e){
@@ -425,7 +451,7 @@ public class CalendarEvent {
       output.write("GEO:" + geolatf + ";" + geolonf + "\n");
       output.write("SUMMARY:" + summary);
       output.write("CLASS:" + classi);
-      output.write("COMMENT:" + "Event:" + distance + "\n");      
+      output.write("COMMENT:" + "Event:" + distanceMiles +"miles"+ distanceKm +"kilometers \n");      
       output.write("END:VEVENT\n");
       output.write("END:VCALENDAR\n");
 
