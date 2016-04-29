@@ -26,8 +26,6 @@ public class CalendarEvent {
   }
 
   public static void main (String [] arg) {
-
-
 //***********************************************************************************************
 //  start of code
 //***********************************************************************************************
@@ -276,8 +274,6 @@ public class CalendarEvent {
 
             System.out.println("\nYou have chosen to read in multiple files.");
 
-
-
             //code for big circle calculations
             inputchoice = sc.nextInt();
             if(inputchoice == 1){  
@@ -294,33 +290,36 @@ public class CalendarEvent {
 
 	          try{
             	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
-            	
+
             	readoutput.read(traceoutput,0,199); //stores events
             	for (int i = 0; i < readLat1.length; i++){
             		readLat1[i] = traceoutput[i+24]; //stores 1st row latitude coordinates
             		readLat2[i] = traceoutput[i+67]; //stores 2nd row latitude coordinates
             	}
-            	
+
             	for (int i = 0; i < readLongi1.length; i++){
             		readLongi1[i] = traceoutput[i+33]; //stores 1st row longitude coordinates
-            		readLongi2[i] = traceoutput[i+77]; //stores 2st row longitude coordinates            		
-            	}            	                 	
-            	        
+            		readLongi2[i] = traceoutput[i+77]; //stores 2st row longitude coordinates
+            	}
+
             	String storeLat1 = new String(readLat1);
             	String storeLongi1 = new String(readLongi1);
             	String storeLat2 = new String(readLat2);
             	String storeLongi2 = new String(readLongi2);
+
             	
             	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
             	System.out.println("Distance in miles:" + greatCircleDistance);
-            	System.out.println("Distance in kilometers:" +  greatCircleDistance/0.62137);
+              System.out.println("Distance in kilometers:" +  greatCircleDistance/0.62137);
+
+            	greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));
+            	System.out.println("Distance:");
             	readoutput.close();
             }
             catch(IOException e){
               System.out.println("Error: File not found.");
             }
             sc.nextLine();
-            break;
             }
 
 
