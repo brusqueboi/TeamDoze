@@ -152,6 +152,22 @@ public class CalendarEvent {
             input = sc.nextLine();
             location = location.concat(input + "\n");
 
+	    //code for geoposition
+	    System.out.println("Enter a '1' for geoposition");
+            inputchoice = sc.nextInt();
+            
+            if(inputchoice == 1){  
+            	System.out.println("Enter latitude for the geographical position:");
+            	lat = sc.nextFloat();
+            	System.out.println("Enter longitude for the geographical position:");
+            	longi = sc.nextFloat();
+
+            	NumberFormat nf = NumberFormat.getInstance();
+            	nf.setMaximumFractionDigits(6);
+            	nf.setGroupingUsed(false);
+            	geolatf = nf.format(lat).toString();
+            	geolonf = nf.format(longi).toString();
+	    }
 
             // input and format of the date field
 
