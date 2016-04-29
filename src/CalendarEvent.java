@@ -36,7 +36,7 @@ public class CalendarEvent {
 	  scheduler(); 
   }
 
-  public double greatCircleDistance(double lat1, double long1, double lat2, double long2){
+  public static double greatCircleDistance(double lat1, double long1, double lat2, double long2){
 
     final double RADIUS = 3950.02; //miles
     double distance;
@@ -275,7 +275,7 @@ public class CalendarEvent {
           case 3:
 
             System.out.println("\nYou have chosen to read in multiple files.");
-
+	    System.out.println("Enter a '1' for geoposition");
             //code for big circle calculations
             inputchoice = sc.nextInt();
             if(inputchoice == 1){  
