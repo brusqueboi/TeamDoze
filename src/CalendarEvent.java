@@ -367,7 +367,6 @@ public class CalendarEvent {
 
                     BufferedReader filein = new BufferedReader(new FileReader (filen));
 
-                    start = new Node()
                     while((input = filein.readLine()) != null){
 
                       input = sc.nextLine();
