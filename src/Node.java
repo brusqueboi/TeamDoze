@@ -1,30 +1,59 @@
+
+// variable stored in the node
 public class Node {
 	Node next;
-	Object data;
+	Node previous;
+	private String ndtstart = "";
+	private String ndtend = "";
+	private String nlocation = "";
+	private String nsummary = "";
+	private String nclass = "";
+	private String ngeolatf = "";
+	private String ngeolonf = "";
+	private String ndistance = "";
 
-	public Node(Object data) {
-		this(data, null);
-	}
-
-	public Node(Object data, Node next) {
+	public Node(String ndtstart, String ndtend, String nlocation, String nsummary, String nclass, String ngeolatf, String ngeolonf, String ndistance, Node next, Node previous)
+	{
+		this.ndtstart = ndtstart;
+		this.ndtend = ndtend;
+		this.nlocation = nlocation;
+		this.nsummary = nsummary;
+		this.nclass = nclass;
+		this.ngeolatf = ngeolatf;
+		this.ngeolonf = ngeolonf;
+		this.ndistance = ndistance;
 		this.next = next;
-		this.data = data;
+		this.previous = previous;
+
 	}
 
-	public Node getNext() {
-		return next;
-	}
-
-	public void setNext(Node next) {
+	public Node(Node next, Node previous) {
 		this.next = next;
+		this.previous = previous;
 	}
 
-	public Object getData() {
-		return data;
+	public Node ()
+	{
+
 	}
 
-	public void setData(Object data) {
-		this.data = data;
+	public Node getNext()
+	{
+		return this.next;
 	}
 
+	public Node getPrevious()
+	{
+		return this.previous;
+	}
+
+	public void setNext(Node newNext)
+	{
+		this.next = newNext;
+	}
+
+	public void setPrevious(Node newPrevious)
+	{
+		this.previous = newPrevious;
+	}
 }

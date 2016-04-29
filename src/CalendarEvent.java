@@ -12,7 +12,7 @@ import java.lang.*;
 
 public class CalendarEvent {
 
-  class node {
+  /*class node {
 
     private String dtstart = "";
     private node next;
@@ -23,7 +23,7 @@ public class CalendarEvent {
     private String nsummary = "";
     private String nclass = "";
 
-  }
+  }*/
 
   public static void main (String [] arg) {
 //***********************************************************************************************
@@ -322,7 +322,6 @@ public class CalendarEvent {
             sc.nextLine();
             }
 
-
             System.out.println("Add multiple events for a single day.");
 
             System.out.println("\nHow many event files would you like to add?");
@@ -342,6 +341,7 @@ public class CalendarEvent {
 
                     BufferedReader filein = new BufferedReader(new FileReader (filen));
 
+                    start = new Node()
                     while((input = filein.readLine()) != null){
 
                       input = sc.nextLine();
