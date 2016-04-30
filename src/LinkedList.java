@@ -4,6 +4,8 @@ public class LinkedList {
 	private Node tail;
 	private int size;
 	private Node current;
+	private int stime;
+	private int etime;
 
 	public LinkedList() {
 		head = null;
@@ -39,13 +41,29 @@ public class LinkedList {
 		else if(current.getNext() == null) {
 
 			current = head;
-			int stime,etime;
+			try {
+				stime = Integer.parseInt(current.getNdtstart());
+				etime = Integer.parseInt(head.getNdtend());
+			}
+			catch (NumberFormatException e) {
+				System.out.println("\nError");
+			}
+			if (etime > stime) {
+				Node temp2 = new Node;
+				temp2 = head;
+				head = current;
+				temp = temp2;
 
-			tail = temp;
-			current.setNext(temp);
+				head.setNext(temp);
+				head.setPrevious(null);
+				temp.previous(head);
+				temp.getNext(null);
+			}
 		}
 
 		else{
+
+			current = head;
 
 			while (current.getNext() != null) {
 
