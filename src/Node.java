@@ -68,9 +68,38 @@ public class Node <T> {
 		return ndistance;
 	}
 
-	public void setNdtstart(){
+	public void setNdtstart(String ndtstart){
 		this.ndtstart = ndtstart;
 	}
+
+	public void setNdtend(String ndtend){
+		this.ndtend = ndtend;
+	}
+
+	public void setNlocation(String nlocation){
+		this.nlocation = nlocation;
+	}
+
+	public void setNsummary(String nsummary){
+		this.nsummary = nsummary;
+	}
+
+	public void setNclass(String nclass){
+		this.nclass = nclass;
+	}
+
+	public void setNgeolatf(String ngeolatf){
+		this.ngeolatf = ngeolatf;
+	}
+
+	public void setNgeolonf(String ngeolonf){
+		this.ngeolonf = ngeolonf;
+	}
+
+	public void setNdistance(String ndistance){
+		this.ndistance = ndistance;
+	}
+
 	public Node getNext()
 	{
 		return this.next;
@@ -83,6 +112,7 @@ public class Node <T> {
 
 	public void setNext(Node newNext)
 	{
+		this.next = newNext;
 		this.next = newNext;
 	}
 
