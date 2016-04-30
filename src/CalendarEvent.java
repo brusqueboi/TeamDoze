@@ -73,6 +73,7 @@ public class CalendarEvent {
     double distanceMiles = 0.0;
     double distanceKm = 0.0;
 
+    int nfile = 0;
     String filen = "";
     String st = "";
     String et = "";
@@ -354,11 +355,11 @@ public class CalendarEvent {
             input = sc.nextLine();
 
             try{
-              numfile = Integer.parseInt(input);
+              nfile = Integer.parseInt(input);
 
-              if(numfile > 1) {
+              if(nfile > 1) {
 
-                for (int i = 0; i < numfile; i++) {
+                for (int i = 0; i < nfile; i++) {
 
                   System.out.println("\nPlease enter the name of the first file: ");
                   filen = sc.nextLine();
