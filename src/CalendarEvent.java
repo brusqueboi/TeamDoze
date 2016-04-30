@@ -353,11 +353,10 @@ public class CalendarEvent {
             System.out.println("\nHow many event files would you like to add?");
             input = sc.nextLine();
 
-
             try{
               numfile = Integer.parseInt(input);
 
-              if(numfile < 1) {
+              if(numfile > 1) {
 
                 for (int i = 0; i < numfile; i++) {
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4dfbfc3-c831-4451-b656-d88a3122c37c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GreatDistanceTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarEvent.java" afterPath="$PROJECT_DIR$/src/CalendarEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList.java" afterPath="$PROJECT_DIR$/src/LinkedList.java" />
     </list>
     <ignored path="CalendarEvent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +35,10 @@
       <file leaf-file-name="CalendarEvent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4570957">
-              <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.021276595">
+              <caret line="356" column="10" selection-start-line="356" selection-start-column="10" selection-end-line="356" selection-end-column="18" />
               <folding>
-                <element signature="e#0#14367#0" expanded="true" />
+                <element signature="e#0#14366#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#728#729#0" expanded="true" />
                 <element signature="e#748#749#0" expanded="true" />
@@ -99,7 +99,7 @@
       <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="42.0">
+            <state vertical-scroll-proportion="49.48148">
               <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -547,12 +547,12 @@
       <workItem from="1461824765595" duration="680000" />
       <workItem from="1461903305338" duration="4735000" />
       <workItem from="1461914997090" duration="50000" />
-      <workItem from="1461969106239" duration="15491000" />
+      <workItem from="1461969106239" duration="15831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65097000" />
+    <option name="totallyTimeSpent" value="65437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,16 +565,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="23" width="1223" height="751" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262519" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2760646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27465856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22692633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -585,7 +586,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32599118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -620,7 +620,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="368" column="0" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -690,7 +690,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="368" column="0" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -760,7 +760,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -830,7 +830,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -900,7 +900,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -913,7 +913,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -926,7 +926,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -939,7 +939,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -952,7 +952,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -965,7 +965,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -978,7 +978,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
@@ -990,16 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="9.067073">
           <caret line="380" column="0" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="42.0">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1050,12 +1040,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="49.48148">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4570957">
-          <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.021276595">
+          <caret line="356" column="10" selection-start-line="356" selection-start-column="10" selection-end-line="356" selection-end-column="18" />
           <folding>
-            <element signature="e#0#14367#0" expanded="true" />
+            <element signature="e#0#14366#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
