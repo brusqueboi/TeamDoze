@@ -12,19 +12,6 @@ import java.lang.*;
 
 public class CalendarEvent {
 
-  /*class node {
-
-    private String dtstart = "";
-    private node next;
-    private node previous;
-    private String ndtstart = "";
-    private String ndtend = "";
-    private String nlocation = "";
-    private String nsummary = "";
-    private String nclass = "";
-
-  }*/
-
   public static void main (String [] arg) {
 //***********************************************************************************************
 //  start of code
@@ -300,7 +287,7 @@ public class CalendarEvent {
           case 3:
 
             System.out.println("\nYou have chosen to read in multiple files.");
-	    System.out.println("Enter a '1' for geoposition");
+
             //code for big circle calculations
             inputchoice = sc.nextInt();
             if(inputchoice == 1){  
@@ -347,6 +334,10 @@ public class CalendarEvent {
             }
             sc.nextLine();
             }
+            // end of Great circle distance code
+
+
+            // code for reading in multiple events
 
             System.out.println("Add multiple events for a single day.");
 

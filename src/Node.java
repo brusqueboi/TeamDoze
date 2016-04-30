@@ -1,5 +1,5 @@
 // variable stored in the node
-public class Node {
+public class Node <T> {
 	Node next;
 	Node previous;
 	private String ndtstart = "";
@@ -36,6 +36,41 @@ public class Node {
 
 	}
 
+	public String getNdtstart(){
+		return ndtstart;
+	}
+
+	public String getNdtend(){
+		return ndtend;
+	}
+
+	public String getNlocation(){
+		return nlocation;
+	}
+
+	public String getNsummary(){
+		return nsummary;
+	}
+
+	public String getNclass(){
+		return nclass;
+	}
+
+	public String getNgeolatf(){
+		return ngeolatf;
+	}
+
+	public String getNgeolonf(){
+		return ngeolonf;
+	}
+
+	public String getNdistance(){
+		return ndistance;
+	}
+
+	public void setNdtstart(){
+		this.ndtstart = ndtstart;
+	}
 	public Node getNext()
 	{
 		return this.next;
