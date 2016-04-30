@@ -5,7 +5,7 @@ public class LinkedList {
 	private int size;
 	private Node current;
 	private int stime;
-	private int etime;
+	private int stime1;
 
 	public LinkedList() {
 		head = null;
@@ -17,7 +17,9 @@ public class LinkedList {
 	public void insert(String start, String end, String location, String Summary, String nclass, String geo, String comment) {
 		//checks if the list is empty and then assigns the newNode to head
 
-		Node temp = new Node;
+		Node temp = new Node();
+		Node temp2 = new Node();
+		current = head;
 		temp.setNdtstart(start);
 		temp.setNdtend(end);
 		temp.setNlocation(location);
@@ -37,27 +39,24 @@ public class LinkedList {
 			size++;
 
 		}
-
 		else if(current.getNext() == null) {
 
-			current = head;
 			try {
-				stime = Integer.parseInt(current.getNdtstart());
-				etime = Integer.parseInt(head.getNdtend());
+				stime = Integer.parseInt(temp.getNdtstart());
+				stime1 = Integer.parseInt(head.getNdtstart());
 			}
 			catch (NumberFormatException e) {
 				System.out.println("\nError");
 			}
-			if (etime > stime) {
-				Node temp2 = new Node;
-				temp2 = head;
+			if (stime1 > stime) {
+				current = temp;
+				temp = head;
 				head = current;
-				temp = temp2;
 
 				head.setNext(temp);
 				head.setPrevious(null);
-				temp.previous(head);
-				temp.getNext(null);
+				temp.setPrevious(head);
+				temp.setNext(null);
 			}
 		}
 
@@ -67,68 +66,24 @@ public class LinkedList {
 
 			while (current.getNext() != null) {
 
-				current = current.getNext();
-			}
-			current.setNext(temp);
-		}
-		size++;
-	}
-	public void insertLast(Node newNode){
-		newNode.setNext(null);
-		if(head == null){
-			head = newNode;
-			tail = newNode;
-		}
-		else{
-			tail.setNext(newNode);
-			tail = newNode;
-		}
-		size++;
-	}
-	public void insertFirst(Node newNode){
-		if(head == null){
-			newNode.setNext(null);
-			newNode.setPrevious(null);
-		    head = newNode;
-		    tail = newNode;
-		}
-		else{
-			newNode.setNext(head);
-			head = newNode;
-		}
-		size++;
-	}
-	public void insertAfter(Node previous, Node newNode) {
-		if(previous == null){
-			insertFirst(newNode);
-		}
-		else if(previous == tail){
-			insertLast(newNode);
-		}
-		else{
-			Node next = previous.getNext();
-			previous.setNext(newNode);
-			newNode.setNext(next);
-		}
-		size++;
-	}
-
-	public Object get(int index) {
-		if (index < 0) {
-			return null;
-		}
-		Node current = null;
-		if (head != null) {
-			current = head.getNext();
-			for (int i = 0; i < index; i++) {
-				if (current.getNext() == null) {
-					return null;
+				try {
+					stime = Integer.parseInt(current.getNdtstart());
+					stime1 = Integer.parseInt(temp.getNdtstart());
 				}
-				current = current.getNext();
+				catch (NumberFormatException e) {
+					System.out.println("\nError");
+				}
+				if (stime1 > stime) {
+
+					temp2 = temp;
+					temp2.setPrevious(current.previous);
+					temp2.setNext(current);
+					current.setPrevious(temp2);
+
+				}
 			}
-			return current.getNdtstart();
 		}
-		return current;
+		size++;
 	}
 
 }
