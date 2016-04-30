@@ -12,7 +12,7 @@ public class LinkedList {
 		size = 0;
 	}
 
-	public void insert(String start, String end, String location, String Summary, String nclass, String geola, String geolo, String disatance) {
+	public void insert(String start, String end, String location, String Summary, String nclass, String geo, String disatance) {
 		//checks if the list is empty and then assigns the newNode to head
 
 		Node temp = new Node;
@@ -21,8 +21,7 @@ public class LinkedList {
 		temp.setNlocation(location);
 		temp.setNsummary(Summary);
 		temp.setNclass(nclass);
-		temp.setNgeolatf(geola);
-		temp.setNgeolonf(geolo);
+		temp.setNgeolatf(geo);
 		temp.setNdistance(disatance);
 		temp.setNext(null);
 		temp.setPrevious(null);
