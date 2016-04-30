@@ -7,6 +7,7 @@
 import java.util.*;
 import java.text.*;
 import java.io.*;
+import java.lang.Math;
 import java.lang.*;
 
 public class CalendarEvent {
@@ -17,9 +18,9 @@ public class CalendarEvent {
 //***********************************************************************************************
     new CalendarEvent();
   }
-	
+
   public CalendarEvent(){
-	  scheduler(); 
+	  scheduler();
   }
 
   public static double greatCircleDistance(double lat1, double long1, double lat2, double long2){
@@ -91,7 +92,7 @@ public class CalendarEvent {
     int l = 0;
     final String uFormat = "MM/dd/yyyy";
     final String cFormat = "yyyy/MM/dd";
-    
+
     while(end == false){
 
     System.out.println("******************************************");
@@ -141,10 +142,10 @@ public class CalendarEvent {
 	    //code for geoposition
 	    System.out.println("\nEnter a '1' for geoposition or '0' to skip");
             inputchoice = sc.nextInt();
-            
+
             do{
-            	
-            if(inputchoice == 1){  
+
+            if(inputchoice == 1){
             	System.out.println("\nEnter latitude for the geographical position:");
             	lat = sc.nextFloat();
             	System.out.println("Enter longitude for the geographical position:");
@@ -161,7 +162,7 @@ public class CalendarEvent {
 	    	endl=false;
 	    }
             }while(endl=false);
-            
+
             sc.nextLine();//clear buffer
 
             // input and format of the date field
@@ -285,130 +286,133 @@ public class CalendarEvent {
 
           case 3:
 
-              System.out.println("\nYou have chosen to read in multiple files.");
-              System.out.println("\nHow many event files would you like to add?");
-              input = sc.nextLine();
-              try{
-                numfile = Integer.parseInt(input);
-                if(numfile == 1){  
-                    System.out.println("Enter latitude for the geographical position:");
-                    lat = sc.nextFloat();
-                    System.out.println("Enter longitude for the geographical position:");
-                    longi = sc.nextFloat();
+            System.out.println("\nYou have chosen to read in multiple files.");
 
-                    NumberFormat nf = NumberFormat.getInstance();
-                    nf.setMaximumFractionDigits(6);
-                    nf.setGroupingUsed(false);
-                    geolatf = nf.format(lat).toString();
-                    geolonf = nf.format(longi).toString();
+            //code for big circle calculations
+            inputchoice = sc.nextInt();
+            if(inputchoice == 1){
+            System.out.println("Enter latitude for the geographical position:");
+            lat = sc.nextFloat();
+            System.out.println("Enter longitude for the geographical position:");
+            longi = sc.nextFloat();
 
-        	          try{
-                    	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
+            NumberFormat nf = NumberFormat.getInstance();
+            nf.setMaximumFractionDigits(6);
+            nf.setGroupingUsed(false);
+            geolatf = nf.format(lat).toString();
+            geolonf = nf.format(longi).toString();
 
-                    	readoutput.read(traceoutput,0,199); //stores events
-                    	for (int i = 0; i < readLat1.length; i++){
-                    		readLat1[i] = traceoutput[i+24]; //stores 1st row latitude coordinates
-                    		readLat2[i] = traceoutput[i+67]; //stores 2nd row latitude coordinates
-                    	}
+	          try{
+            	BufferedReader readoutput = new BufferedReader(new FileReader("sortedEvents.txt"));
 
-                    	for (int i = 0; i < readLongi1.length; i++){
-                    		readLongi1[i] = traceoutput[i+33]; //stores 1st row longitude coordinates
-                    		readLongi2[i] = traceoutput[i+77]; //stores 2st row longitude coordinates
-                    	}
+            	readoutput.read(traceoutput,0,199); //stores events
+            	for (int i = 0; i < readLat1.length; i++){
+            		readLat1[i] = traceoutput[i+24]; //stores 1st row latitude coordinates
+            		readLat2[i] = traceoutput[i+67]; //stores 2nd row latitude coordinates
+            	}
 
-                    	String storeLat1 = new String(readLat1);
-                    	String storeLongi1 = new String(readLongi1);
-                    	String storeLat2 = new String(readLat2);
-                    	String storeLongi2 = new String(readLongi2);
+            	for (int i = 0; i < readLongi1.length; i++){
+            		readLongi1[i] = traceoutput[i+33]; //stores 1st row longitude coordinates
+            		readLongi2[i] = traceoutput[i+77]; //stores 2st row longitude coordinates
+            	}
 
-                    	
-                    	distanceMiles = greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));       
-                    	distanceKm = distanceMiles/0.62137;
-                    	System.out.println("Distance in miles:" + distanceMiles);
-                      System.out.println("Distance in kilometers:" +  distanceKm);
+            	String storeLat1 = new String(readLat1);
+            	String storeLongi1 = new String(readLongi1);
+            	String storeLat2 = new String(readLat2);
+            	String storeLongi2 = new String(readLongi2);
 
-                    	readoutput.close();
-                    }
-                    catch(IOException e){
-                      System.out.println("Error: File not found.");
-                    }
-                    sc.nextLine();
-                    }
-                    
-                    // end of Great circle distance code
 
-<<<<<<< HEAD
+            	distanceMiles = greatCircleDistance(Double.parseDouble(storeLat1),Double.parseDouble(storeLongi1),Double.parseDouble(storeLat2),Double.parseDouble(storeLongi2));
+            	distanceKm = distanceMiles/0.62137;
+            	System.out.println("Distance in miles:" + distanceMiles);
+              	System.out.println("Distance in kilometers:" +  distanceKm);
+
+            	readoutput.close();
+            }
+            catch(IOException e){
+              System.out.println("Error: File not found.");
+            }
+            sc.nextLine();
+            }
+            // end of Great circle distance code
+
+
+            // code for reading in multiple events
+
+            System.out.println("Add multiple events for a single day.");
+
+            System.out.println("\nHow many event files would you like to add?");
+            input = sc.nextLine();
+
 
             try{
               numfile = Integer.parseInt(input);
-=======
-                if(numfile > 1) {
-                  System.out.println("You have chosen to add multiple events for a single day.");
-                  for (int i = 0; i < numfile; i++) {
->>>>>>> origin/master
 
-                    System.out.println("\nPlease enter the name of the first file: ");
-                    filen = sc.nextLine();
+              if(numfile < 1) {
 
-                    try {
+                for (int i = 0; i < numfile; i++) {
 
-                      BufferedReader filein = new BufferedReader(new FileReader (filen));
+                  System.out.println("\nPlease enter the name of the first file: ");
+                  filen = sc.nextLine();
 
-                      while((input = filein.readLine()) != null){
+                  try {
 
-                        input = sc.nextLine();
+                    BufferedReader filein = new BufferedReader(new FileReader (filen));
 
-                        if(input.contains("DTSTART;TZID=")){
+                    while((input = filein.readLine()) != null){
 
-                          try {
+                      input = sc.nextLine();
 
-                            l = input.length() - 6;
-                            startTime[i] = Integer.parseInt(input.substring(l, input.length()));
-                            Arrays.sort(startTime);
+                      if(input.contains("DTSTART;TZID=")){
 
+                        try {
 
-                          }
-                          catch(NumberFormatException e){
-                            System.out.println("\nError: Unable to read files start time.");
-                          }
-                        }
+                          l = input.length() - 6;
+                          startTime[i] = Integer.parseInt(input.substring(l, input.length()));
+                          Arrays.sort(startTime);
 
-                        if(input.contains("DTEND;TZID=")){
-
-                          try{
-                            l = input.length() - 6;
-                            endTime[i] = Integer.parseInt(input.substring(l, input.length()));
-                          }
-                          catch(NumberFormatException e){
-                            System.out.println("\nError: Unable to read files end time.");
-                          }
-                        }
-                        if(input.contains("Location:")){
-
-                          locations[i] = input.substring(8, input.length());
 
                         }
+                        catch(NumberFormatException e){
+                          System.out.println("\nError: Unable to read files start time.");
+                        }
+                      }
+
+                      if(input.contains("DTEND;TZID=")){
+
+                        try{
+                          l = input.length() - 6;
+                          endTime[i] = Integer.parseInt(input.substring(l, input.length()));
+                        }
+                        catch(NumberFormatException e){
+                          System.out.println("\nError: Unable to read files end time.");
+                        }
+                      }
+                      if(input.contains("Location:")){
+
+                        locations[i] = input.substring(8, input.length());
 
                       }
-                    }
 
-                    catch(IOException io){
-                      System.out.println("\nError: please provide a valid input.");
                     }
+                  }
 
+                  catch(IOException io){
+                    System.out.println("\nError: please provide a valid input.");
                   }
 
                 }
 
-                else{
-
-                  System.out.println("\nError: Please input a positive number");
-                }
-              }
-              catch(NumberFormatException e){
-                System.out.println("\nError: please input a a valid format");
               }
 
+              else{
+
+                System.out.println("\nError: Please input a positive number");
+              }
+            }
+            catch(NumberFormatException e){
+              System.out.println("\nError: please input a a valid format");
+            }
 
             break;
 

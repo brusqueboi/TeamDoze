@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c4dfbfc3-c831-4451-b656-d88a3122c37c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarEvent.java" afterPath="$PROJECT_DIR$/src/CalendarEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList.java" afterPath="$PROJECT_DIR$/src/LinkedList.java" />
     </list>
     <ignored path="CalendarEvent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +34,13 @@
       <file leaf-file-name="CalendarEvent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8702292">
-              <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+            <state vertical-scroll-proportion="2.557252">
+              <caret line="361" column="32" selection-start-line="361" selection-start-column="32" selection-end-line="361" selection-end-column="32" />
               <folding>
-                <element signature="e#0#14218#0" expanded="true" />
+                <element signature="e#0#14151#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,7 +98,7 @@
       <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.222222">
+            <state vertical-scroll-proportion="-23.333334">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -127,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/CalendarEvent_V1.java" />
         <option value="$PROJECT_DIR$/src/CE_workforupdate1_2_3.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
-        <option value="$PROJECT_DIR$/src/CalendarEvent.java" />
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/CalendarEvent.java" />
       </list>
     </option>
   </component>
@@ -543,12 +544,12 @@
       <workItem from="1461824765595" duration="680000" />
       <workItem from="1461903305338" duration="4735000" />
       <workItem from="1461914997090" duration="50000" />
-      <workItem from="1461969106239" duration="7600000" />
+      <workItem from="1461969106239" duration="7774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57206000" />
+    <option name="totallyTimeSpent" value="57380000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,8 +617,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="368" column="0" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,8 +685,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="368" column="0" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -748,8 +753,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,8 +821,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -880,8 +889,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,8 +902,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,8 +915,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,8 +928,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -924,8 +941,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -935,8 +954,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -946,8 +967,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1008,7 +1031,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.222222">
+        <state vertical-scroll-proportion="-23.333334">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
@@ -1016,11 +1039,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8702292">
-          <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+        <state vertical-scroll-proportion="2.557252">
+          <caret line="361" column="32" selection-start-line="361" selection-start-column="32" selection-end-line="361" selection-end-column="32" />
           <folding>
-            <element signature="e#0#14218#0" expanded="true" />
+            <element signature="e#0#14151#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
