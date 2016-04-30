@@ -124,7 +124,7 @@ public class CalendarEvent {
 
       if(choice >= 1 && choice < 7){
 
-        switch(choice){
+        switch(choice) {
 
           case 1:
 
@@ -149,29 +149,44 @@ public class CalendarEvent {
             input = sc.nextLine();
             location = location.concat(input + "\n");
 
-	    //code for geoposition
-	    System.out.println("\nEnter a '1' for geoposition or '0' to skip");
+            //code for geoposition
+            System.out.println("\nEnter a '1' for geoposition or '0' to skip");
             inputchoice = sc.nextInt();
 
-            do{
+            while (endl == false) {
 
-            if(inputchoice == 1){
-            	System.out.println("\nEnter latitude for the geographical position:");
-            	lat = sc.nextFloat();
-            	System.out.println("Enter longitude for the geographical position:");
-            	longi = sc.nextFloat();
 
-            	NumberFormat nf = NumberFormat.getInstance();
-            	nf.setMaximumFractionDigits(6);
-            	nf.setGroupingUsed(false);
-            	geolatf = nf.format(lat).toString();
-            	geolonf = nf.format(longi).toString();
-            	endl=false;
-	    }
-	    if(inputchoice == 0){
-	    	endl=false;
-	    }
-            }while(endl=false);
+              if (inputchoice == 1) {
+
+                System.out.println("\nEnter latitude for the geographical position:");
+                lat = sc.nextFloat();
+                System.out.println("Enter longitude for the geographical position:");
+                longi = sc.nextFloat();
+
+                if (lat > -90 && lat < 90) {
+                  if (longi > -90 && longi < 90) {
+
+                    NumberFormat nf = NumberFormat.getInstance();
+                    nf.setMaximumFractionDigits(6);
+                    nf.setGroupingUsed(false);
+                    geolatf = nf.format(lat).toString();
+                    geolonf = nf.format(longi).toString();
+                    endl = true;
+                  }
+                  else {
+                    System.out.println("\nError: invalid input");
+                  }
+                }
+                else {
+                  System.out.println("\nError: invalid input");
+                }
+              }
+
+              if (inputchoice == 0) {
+                endl = true;
+              }
+            }
+
 
             sc.nextLine();//clear buffer
 
@@ -195,6 +210,7 @@ public class CalendarEvent {
                 dtstart = dtstart.concat(input);
                 dtend = dtstart;
                 dend = true;
+
               }
               catch(ParseException e){
                 System.out.print("Error, Date is wrong");
@@ -373,22 +389,17 @@ public class CalendarEvent {
                       input = sc.nextLine();
 
                       if(input.contains("DTSTART;TZID=")){
-
                           l = input.length() - 6;
                           st = input.substring(l, input.length());
-
                       }
 
                       if(input.contains("DTEND;TZID=")){
-
                           l = input.length() - 6;
                           et = input.substring(l, input.length());
-
                       }
                       if(input.contains("Location:")){
 
                         loc = input.substring(8, input.length());
-
                       }
 
                       if(input.contains("GEO:")){
@@ -408,19 +419,16 @@ public class CalendarEvent {
                       }
 
                       list.insert(st, et, loc, sum, cl, geo, com, dist);
+
                     }
                   }
 
                   catch(IOException io){
                     System.out.println("\nError: please provide a valid input.");
                   }
-
                 }
-
               }
-
               else{
-
                 System.out.println("\nError: Please input a positive number");
               }
             }
@@ -467,8 +475,6 @@ public class CalendarEvent {
       System.out.print("Error");
     }
     }
-
     System.exit(0);
   }
-
 }

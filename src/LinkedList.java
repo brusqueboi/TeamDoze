@@ -35,7 +35,7 @@ public class LinkedList {
 		temp.setNext(null);
 		temp.setPrevious(null);
 
-		if(head == null){
+		if (head == null) {
 
 			head = temp;
 			head.setNext(null);
@@ -43,7 +43,7 @@ public class LinkedList {
 			size++;
 
 		}
-		else if(current.getNext() == null) {
+		else if (current.getNext() == null) {
 
 			try {
 				stime = Integer.parseInt(temp.getNdtstart());
@@ -64,7 +64,7 @@ public class LinkedList {
 			}
 		}
 
-		else{
+		else {
 
 			Node temp3 = new Node();
 			current = head.next;
@@ -91,34 +91,35 @@ public class LinkedList {
 
 				}
 
-				if(current.getNext() == null){
+				if (current.getNext() == null) {
 					current.setNext(temp);
 					temp.setPrevious(current);
 				}
 			}
 		}
 		size++;
+		return;
 	}
 
-	public void write( ){
+	public void write() {
 
 		current = head;
 		File file;
 		int h = 0;
 
-		while(current.getNext() != null){
+		while (current.getNext() != null) {
 
-			try{
+			try {
 
 				// create ics file
-				file = new File("calendarevent"+h+".ics");
+				file = new File("calendarevent" + h + ".ics");
 				BufferedWriter output = new BufferedWriter(new FileWriter(file));
 
 				// write to file
 				output.write("BEGIN:VCALENDAR\n");
 				output.write("VERSION: 2.0\n");
 				output.write("BEGIN:VEVENT\n");
-				output.write("DTSTART;TZID=Pacific/Honolulu:"+ current.getNdtstart());
+				output.write("DTSTART;TZID=Pacific/Honolulu:" + current.getNdtstart());
 				output.write("DTEND;TZID=Pacific/Honolulu:" + current.getNdtend());
 				output.write("LOCATION:" + current.getNlocation());
 				output.write("GEO:" + current.getNgeo() + "\n");
@@ -131,12 +132,9 @@ public class LinkedList {
 				output.close();
 
 			}
-			catch(Exception e){
+			catch (Exception e) {
 				System.out.print("Error");
 			}
-
 		}
-
 	}
-
 }
