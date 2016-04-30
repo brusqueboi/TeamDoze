@@ -21,7 +21,7 @@ public class LinkedList {
 		temp.setNlocation(location);
 		temp.setNsummary(Summary);
 		temp.setNclass(nclass);
-		temp.setNgeolatf(geo);
+		temp.setNgeo(geo);
 		temp.setNdistance(disatance);
 		temp.setNext(null);
 		temp.setPrevious(null);
