@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4dfbfc3-c831-4451-b656-d88a3122c37c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList.java" afterPath="$PROJECT_DIR$/src/LinkedList.java" />
-    </list>
+    <list default="true" id="c4dfbfc3-c831-4451-b656-d88a3122c37c" name="Default" comment="" />
     <ignored path="CalendarEvent.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,7 +32,7 @@
       <file leaf-file-name="CalendarEvent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.563981">
+            <state vertical-scroll-proportion="4.104265">
               <caret line="407" column="23" selection-start-line="407" selection-start-column="23" selection-end-line="407" selection-end-column="23" />
               <folding>
                 <element signature="e#0#14364#0" expanded="true" />
@@ -49,8 +47,8 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-47.22222">
-              <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+            <state vertical-scroll-proportion="-13.555555">
+              <caret line="112" column="3" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
               <folding>
                 <element signature="e#908#909#0" expanded="true" />
                 <element signature="e#930#931#0" expanded="true" />
@@ -76,6 +74,7 @@
                 <element signature="e#1505#1506#0" expanded="true" />
                 <element signature="e#1551#1552#0" expanded="true" />
                 <element signature="e#1584#1585#0" expanded="true" />
+                <element signature="e#1628#1629#0" expanded="true" />
                 <element signature="e#1659#1660#0" expanded="true" />
                 <element signature="e#1699#1700#0" expanded="true" />
                 <element signature="e#1726#1727#0" expanded="true" />
@@ -97,8 +96,8 @@
       <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.666667">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -127,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/CalendarEvent_V1.java" />
         <option value="$PROJECT_DIR$/src/CE_workforupdate1_2_3.java" />
         <option value="$PROJECT_DIR$/src/CalendarEvent.java" />
-        <option value="$PROJECT_DIR$/src/Node.java" />
         <option value="$PROJECT_DIR$/src/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/Node.java" />
       </list>
     </option>
   </component>
@@ -543,12 +542,12 @@
       <workItem from="1461824765595" duration="680000" />
       <workItem from="1461903305338" duration="4735000" />
       <workItem from="1461914997090" duration="50000" />
-      <workItem from="1461969106239" duration="12783000" />
+      <workItem from="1461969106239" duration="12843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62389000" />
+    <option name="totallyTimeSpent" value="62449000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -653,6 +652,7 @@
             <element signature="e#1505#1506#0" expanded="true" />
             <element signature="e#1551#1552#0" expanded="true" />
             <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
             <element signature="e#1659#1660#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
@@ -720,6 +720,7 @@
             <element signature="e#1505#1506#0" expanded="true" />
             <element signature="e#1551#1552#0" expanded="true" />
             <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
             <element signature="e#1659#1660#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
@@ -787,6 +788,7 @@
             <element signature="e#1505#1506#0" expanded="true" />
             <element signature="e#1551#1552#0" expanded="true" />
             <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
             <element signature="e#1659#1660#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
@@ -854,6 +856,7 @@
             <element signature="e#1505#1506#0" expanded="true" />
             <element signature="e#1551#1552#0" expanded="true" />
             <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
             <element signature="e#1659#1660#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
@@ -979,16 +982,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.666667">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.22222">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+        <state vertical-scroll-proportion="-13.555555">
+          <caret line="112" column="3" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
           <folding>
             <element signature="e#908#909#0" expanded="true" />
             <element signature="e#930#931#0" expanded="true" />
@@ -1014,6 +1017,7 @@
             <element signature="e#1505#1506#0" expanded="true" />
             <element signature="e#1551#1552#0" expanded="true" />
             <element signature="e#1584#1585#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
             <element signature="e#1659#1660#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
@@ -1033,7 +1037,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CalendarEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.563981">
+        <state vertical-scroll-proportion="4.104265">
           <caret line="407" column="23" selection-start-line="407" selection-start-column="23" selection-end-line="407" selection-end-column="23" />
           <folding>
             <element signature="e#0#14364#0" expanded="true" />
