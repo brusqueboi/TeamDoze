@@ -83,6 +83,7 @@ public class CalendarEvent {
     String dist = "";
     String loc = "";
     String cord = "";
+    String com = "";
     float longi = 0;
     float lat = 0;
     int nshtime = 0;
@@ -403,10 +404,10 @@ public class CalendarEvent {
                       }
 
                       if(input.contains("COMMENT:")){
-
+                        com = input.substring(7, input.length());
                       }
 
-                      list.insert(st, et, loc, sum, cl, geo, dist);
+                      list.insert(st, et, loc, sum, cl, geo, com);
 
 
 

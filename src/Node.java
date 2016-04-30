@@ -9,8 +9,9 @@ public class Node <T> {
 	private String nclass = "";
 	private String ngeo = "";
 	private String ndistance = "";
+	private String ncomment = "";
 
-	public Node(String ndtstart, String ndtend, String nlocation, String nsummary, String nclass, String ngeo, String ndistance, Node next, Node previous)
+	public Node(String ndtstart, String ndtend, String nlocation, String nsummary, String nclass, String ngeo, String ndistance, String ncomment, Node next, Node previous)
 	{
 		this.ndtstart = ndtstart;
 		this.ndtend = ndtend;
@@ -21,6 +22,7 @@ public class Node <T> {
 		this.ndistance = ndistance;
 		this.next = next;
 		this.previous = previous;
+		this.ncomment = ncomment;
 
 	}
 
@@ -42,6 +44,9 @@ public class Node <T> {
 		return ndtend;
 	}
 
+	public String getNcomment(){
+		return ncomment;
+	}
 	public String getNlocation(){
 		return nlocation;
 	}
@@ -64,6 +69,10 @@ public class Node <T> {
 
 	public void setNdtstart(String ndtstart){
 		this.ndtstart = ndtstart;
+	}
+
+	public void setNcomment(String ncomment){
+		this.ncomment = ncomment;
 	}
 
 	public void setNdtend(String ndtend){
