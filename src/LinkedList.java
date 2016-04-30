@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
 public class LinkedList {
 
 	private Node head;
@@ -94,6 +98,45 @@ public class LinkedList {
 			}
 		}
 		size++;
+	}
+
+	public void write( ){
+
+		current = head;
+		File file;
+		int h = 0;
+
+		while(current.getNext() != null){
+
+			try{
+
+				// create ics file
+				file = new File("calendarevent"+h+".ics");
+				BufferedWriter output = new BufferedWriter(new FileWriter(file));
+
+				// write to file
+				output.write("BEGIN:VCALENDAR\n");
+				output.write("VERSION: 2.0\n");
+				output.write("BEGIN:VEVENT\n");
+				output.write("DTSTART;TZID=Pacific/Honolulu:"+ current.getNdtstart());
+				output.write("DTEND;TZID=Pacific/Honolulu:" + current.getNdtend());
+				output.write("LOCATION:" + current.getNlocation());
+				output.write("GEO:" + current.getNgeo() + "\n");
+				output.write("SUMMARY:" + current.getNsummary());
+				output.write("CLASS:" + current.getNclass());
+				output.write("COMMENT:" + "Event:" + current.getNdistance() + "\n");
+				output.write("END:VEVENT\n");
+				output.write("END:VCALENDAR\n");
+
+				output.close();
+
+			}
+			catch(Exception e){
+				System.out.print("Error");
+			}
+
+		}
+
 	}
 
 }

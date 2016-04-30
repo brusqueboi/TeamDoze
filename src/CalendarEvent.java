@@ -408,9 +408,6 @@ public class CalendarEvent {
                       }
 
                       list.insert(st, et, loc, sum, cl, geo, com);
-
-
-
                     }
                   }
 
