@@ -62,9 +62,13 @@ public class LinkedList {
 
 		else{
 
-			current = head;
+			Node temp3 = new Node();
+			current = head.next;
+			temp3 = head;
 
 			while (current.getNext() != null) {
+
+				current = current.getNext();
 
 				try {
 					stime = Integer.parseInt(current.getNdtstart());
@@ -79,7 +83,13 @@ public class LinkedList {
 					temp2.setPrevious(current.previous);
 					temp2.setNext(current);
 					current.setPrevious(temp2);
+					temp3.setNext(temp2);
 
+				}
+
+				if(current.getNext() == null){
+					current.setNext(temp);
+					temp.setPrevious(current);
 				}
 			}
 		}
