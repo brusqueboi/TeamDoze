@@ -3,23 +3,52 @@ public class LinkedList {
 	private Node head;
 	private Node tail;
 	private int size;
-	private Node newNode;
+	private Node current;
 
 	public LinkedList() {
 		head = null;
 		tail = null;
+		current = null;
 		size = 0;
 	}
 
-	public void insert(Node newNode) {
+	public void insert(String start, String end, String location, String Summary, String nclass, String geola, String geolo, String disatance) {
 		//checks if the list is empty and then assigns the newNode to head
+
+		Node temp = new Node;
+		temp.setNdtstart(start);
+		temp.setNdtend(end);
+		temp.setNlocation(location);
+		temp.setNsummary(Summary);
+		temp.setNclass(nclass);
+		temp.setNgeolatf(geola);
+		temp.setNgeolonf(geolo);
+		temp.setNdistance(disatance);
+		temp.setNext(null);
+		temp.setPrevious(null);
+
 		if(head == null){
-			head = newNode;
+
+			head = temp;
+			head.setNext(null);
+			head.setPrevious(null);
+			size++;
+
 		}
-		Node temp = newNode;
-		Node current = head;
-		if (current != null) {
+
+		else if(current.getNext() == null) {
+
+			current = head;
+			int stime,etime;
+
+			tail = temp;
+			current.setNext(temp);
+		}
+
+		else{
+
 			while (current.getNext() != null) {
+
 				current = current.getNext();
 			}
 			current.setNext(temp);
