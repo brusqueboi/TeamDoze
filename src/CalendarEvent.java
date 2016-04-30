@@ -74,9 +74,14 @@ public class CalendarEvent {
     double distanceKm = 0.0;
 
     String filen = "";
-    int[] startTime = new int[20];
-    int[] endTime = new int[20];
-    String[] locations = new String[20];
+    String st = "";
+    String et = "";
+    String sum = "";
+    String cl = "";
+    String gla = "";
+    String glo = "";
+    String dist = "";
+    String loc = "";
     float longi = 0;
     float lat = 0;
     int nshtime = 0;
@@ -92,6 +97,8 @@ public class CalendarEvent {
     int l = 0;
     final String uFormat = "MM/dd/yyyy";
     final String cFormat = "yyyy/MM/dd";
+
+    LinkedList list = new LinkedList();
 
     while(end == false){
 
@@ -365,34 +372,34 @@ public class CalendarEvent {
 
                       if(input.contains("DTSTART;TZID=")){
 
-                        try {
-
                           l = input.length() - 6;
-                          startTime[i] = Integer.parseInt(input.substring(l, input.length()));
-                          Arrays.sort(startTime);
+                          st = input.substring(l, input.length());
 
-
-                        }
-                        catch(NumberFormatException e){
-                          System.out.println("\nError: Unable to read files start time.");
-                        }
                       }
 
                       if(input.contains("DTEND;TZID=")){
 
-                        try{
                           l = input.length() - 6;
-                          endTime[i] = Integer.parseInt(input.substring(l, input.length()));
-                        }
-                        catch(NumberFormatException e){
-                          System.out.println("\nError: Unable to read files end time.");
-                        }
+                          et = input.substring(l, input.length());
+
                       }
                       if(input.contains("Location:")){
 
-                        locations[i] = input.substring(8, input.length());
+                        loc = input.substring(8, input.length());
 
                       }
+
+                      if(input.contains("GEO:")){
+                        geo = input.substring(4,input.length());
+                      }
+
+                      if(input.contains("SUMMARY:")){
+                        sum = input.substring(8,input.length());
+                      }
+
+                      list.insert(st, et, loc, sum, cl, gla, glo, dist);
+
+
 
                     }
                   }
