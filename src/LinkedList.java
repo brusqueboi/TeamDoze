@@ -18,7 +18,7 @@ public class LinkedList {
 		size = 0;
 	}
 
-	public void insert(String start, String end, String location, String Summary, String nclass, String geo, String comment) {
+	public void insert(String start, String end, String location, String Summary, String nclass, String geo, String comment, String distance) {
 		//checks if the list is empty and then assigns the newNode to head
 
 		Node temp = new Node();
@@ -31,7 +31,7 @@ public class LinkedList {
 		temp.setNclass(nclass);
 		temp.setNcomment(comment);
 		temp.setNgeo(geo);
-		temp.setNdistance(null);
+		temp.setNdistance(distance);
 		temp.setNext(null);
 		temp.setPrevious(null);
 

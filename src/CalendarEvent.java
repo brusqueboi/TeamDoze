@@ -407,7 +407,7 @@ public class CalendarEvent {
                         com = input.substring(7, input.length());
                       }
 
-                      list.insert(st, et, loc, sum, cl, geo, com);
+                      list.insert(st, et, loc, sum, cl, geo, com, dist);
                     }
                   }
 
